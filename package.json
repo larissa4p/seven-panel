@@ -1,0 +1,27 @@
+{
+  "name": "seven-panel",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.5",
+    "@supabase/supabase-js": "^2.112.4",
+    "7six5": "file:../7six5",
+    "next": "16.3.2",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^26.4.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "tailwindcss": "^4",
+    "typescript": "^7.0.2"
+  }
+}
