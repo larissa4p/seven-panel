@@ -1,26 +1,28 @@
 # seven-panel
 
-Painel de administração para WhatsApp via [Evolution API](https://doc.evolution-api.com/), usando [7six5](https://github.com/larissa4p/7six5) como SDK.
+WhatsApp admin panel built with Next.js and Supabase, powered by the [Evolution API](https://doc.evolution-api.com/) via the [7six5](https://github.com/larissa4p/7six5) SDK.
+
+## Features
+
+- Authentication via Supabase Auth
+- Dashboard with sent/received message counts
+- Send messages in multiple formats: text, image, audio, video, document
+- Full message history
+- Webhook endpoint to receive and store incoming messages
 
 ## Stack
 
-- Next.js 14 (App Router)
-- Supabase (banco + auth)
-- Tailwind CSS
+- **Next.js 14** (App Router)
+- **Supabase** — database + auth
+- **Tailwind CSS** — styling
+- **7six5** — WhatsApp SDK (Evolution API wrapper)
+- **TypeScript**
 
-## Funcionalidades
+## Setup
 
-- Login com Supabase Auth
-- Dashboard com contagem de mensagens enviadas e recebidas
-- Envio de mensagens (texto, imagem, áudio, vídeo, documento)
-- Histórico de mensagens
-- Webhook para receber mensagens e salvar no banco
+Copy `.env.local.example` to `.env.local` and fill in the values:
 
-## Configuração
-
-Copie o `.env.local.example` para `.env.local` e preencha:
-
-```
+```env
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 EVOLUTION_URL=
@@ -28,9 +30,9 @@ EVOLUTION_API_KEY=
 EVOLUTION_INSTANCE=
 ```
 
-## Banco de dados
+## Database
 
-Crie a tabela `messages` no Supabase:
+Create the `messages` table in Supabase:
 
 ```sql
 create table messages (
@@ -43,7 +45,7 @@ create table messages (
 );
 ```
 
-## Rodando
+## Running
 
 ```bash
 npm install
@@ -52,8 +54,8 @@ npm run dev
 
 ## Webhook
 
-Configure a URL do webhook na Evolution API apontando para `/api/webhook`.
+Point your Evolution API webhook URL to `/api/webhook` — incoming messages will be automatically saved to Supabase.
 
-## Licença
+## License
 
 MIT
