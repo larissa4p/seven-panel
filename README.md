@@ -13,9 +13,9 @@ WhatsApp admin panel built with Next.js and Supabase, powered by the [Evolution 
 ## Stack
 
 - **Next.js 14** (App Router)
-- **Supabase** — database + auth
-- **Tailwind CSS** — styling
-- **7six5** — WhatsApp SDK (Evolution API wrapper)
+- **Supabase**: database + auth
+- **Tailwind CSS**: styling
+- **7six5**: WhatsApp SDK (Evolution API wrapper)
 - **TypeScript**
 
 ## Setup
@@ -54,7 +54,7 @@ npm run dev
 
 ## Webhook
 
-Point your Evolution API webhook URL to `/api/webhook` — incoming messages will be automatically saved to Supabase.
+Point your Evolution API webhook URL to `/api/webhook`: incoming messages will be automatically saved to Supabase.
 
 ## License
 
